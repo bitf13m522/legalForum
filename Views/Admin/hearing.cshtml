@@ -1,26 +1,9 @@
-﻿<!DOCTYPE html>
-<html>
-<body>
+﻿@using legalForum.Models()
 
-    <h2>Send e-mail to someone@example.com:</h2>
-
-    <form action="tazeemhaider@gmail.com" method="post" enctype="text/plain">
-        Name:<br>
-        <input type="text" name="name" value="your name"><br>
-        E-mail:<br>
-        <input type="text" name="mail" value="your email"><br>
-        Comment:<br>
-        <input type="text" name="comment" value="your comment" size="50"><br><br>
-        <input type="submit" value="Send">
-        <input type="reset" value="Reset">
-    </form>
-
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Gerald Harris | Clients</title>
+    <title>Contact</title>
     <meta charset="utf-8">
     <link rel="icon" href="~/Content/images/favicon.ico">
     <link rel="shortcut icon" href="~/Content/images/favicon.ico">
@@ -42,7 +25,7 @@
                 <h1><a href="~/Home/index"><img src="~/Content/images/logo.png" alt=""></a> </h1>
                 <div class="clear"></div>
                 <div class="menu_block">
-                    <h2> Lawyer's profile</h2>
+                    <h2>Contact</h2>
                     <nav>
                         <ul class="sf-menu">
                             <li> </li>
@@ -62,8 +45,9 @@
                             <li> </li>
                             <li> </li>
                             <li> </li>
+                            <li><a href="~/Home/clients">My Profile</a></li>
+                            <li><a href="~/Home/clientLogOut">log out</a></li>
 
-                            <li><a href="~/Admin/lawyerLogOut">log out</a></li>
 
                         </ul>
                     </nav>
@@ -77,30 +61,27 @@
         <div class="container_12">
 
             <div class="grid_7" style="text-align:center;">
-                <div class="col-sm-6" style="margin-left:25.5%; margin-top:5%; padding:10px">
-
-                    <div class="panel panel-success" style="border-color:#003366">
-
-                        <div class="panel-heading" style="color:white; border-color:#003366; background-color:#003366">
-                            <span>Operation Failed</span>
-                        </div>
-
-                        <div class="grid_7" style="text-align:center;">
-                            <h2>Send e-mail to @Session["lawyerName"]:</h2>
-
-                            <form action="MAILTO:someone@example.com" method="post" enctype="text/plain">
 
 
-                                <div>
 
-                                    <a href="mailto:bitf13m522@pucit.edu.pk">SUBMIT EMAIL TO: bitf13m522@pucit.edu.pk</a>
+                <form action="~/Home/addcl" method="Post">
+                    <h3>
+                        <h2>Send e-mail to @Session["lawyer_id"]:</h2>
+
+                        <form action="../Home/sent" method="post" enctype="text/plain">
+                            Name:<br>
+                            <input type="text" name="name" value="name"><br>
+                            E-mail:<br>
+                            <input type="text" name="mail" value="mail"><br>
+                            Comment:<br>
+                            <input type="text" name="comment" value="your comments" size="80"><br><br>
+                            <input type="submit" value="Send">
+                            <input type="reset" value="Reset">
+                        </form>
+                    </h3>
+                </form>
 
 
-                                </div>
-                            </form>
-</div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -123,4 +104,3 @@
     </footer>
 </body>
 </html>
-
